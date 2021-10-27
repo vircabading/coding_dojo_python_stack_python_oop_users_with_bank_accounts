@@ -92,7 +92,11 @@ class User:
 # //// MAIN EXECUTABLE SECTION /////////////////////////////
 
 user_1 = User("Vin", "Diesel")
+user_2 = User("Brad","Pitt")
+user_3 = User("Dwayne","Johnson")
 user_1.info()
+user_2.info()
+user_3.info()
 
 
 
