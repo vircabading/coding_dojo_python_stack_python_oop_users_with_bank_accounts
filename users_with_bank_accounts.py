@@ -78,12 +78,6 @@ class User:
     #     self.make_withdrawal(amount)
     #     other_user.make_deposit(amount)
     #     return self
-    
-    # def update_user_info (self, first_name="John", last_name="Doe", account_balance=0):
-    #     self.first_name = first_name
-    #     self.last_name = last_name
-    #     self.account_balance = account_balance
-    #     return self
 
     def info(self):                                         # Method that displays info of class instance
         print(f"{f' User ::: First Name : {self.first_name} :: Last Name : {self.last_name} ':*^100}")
@@ -111,27 +105,3 @@ print()
 
 utl.print_desc("The Rock makes bank in his new movie Fast and Furiouser, so he opens another bank account")
 user_3.add_bank_account(5,1234567).display_user_balance()
-
-
-# account_1 = BankAccount(6,1000)                                 # Create 2 accounts
-# account_2 = BankAccount(3,25000)
-
-# account_1.print_all_account_info()
-
-# utl.print_desc("To the first account, make 3 deposits and 1 withdrawal, then yield interest")
-
-# account_1.display_account_info();
-# print()
-# print("Deposit $10, $200, and $300 then withdraw $7")
-# print()
-# account_1.deposit(10).deposit(200).deposit(300).withdraw(7).display_account_info()
-# print()
-
-# utl.print_desc("To the second account, make 2 deposits and 4 withdrawals, then yield interest")
-
-# account_2.display_account_info();
-# print()
-# print("Deposit $25000 and $50000, next withdraw $8, $80, $800, $8000, then yield interest\n")
-# account_2.deposit(25000).deposit(50000).withdraw(8).withdraw(80).withdraw(800).withdraw(8000).yield_interest().display_account_info()
-
-# account_1.print_all_account_info()
