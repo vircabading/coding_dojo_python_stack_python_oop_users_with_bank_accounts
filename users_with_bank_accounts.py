@@ -56,9 +56,9 @@ class User:
         self.account = []                                                   # Create a list of accounts with an initial single account
         self.account.append(BankAccount(2,0))
 
-    # def make_deposit (self, amount=0):                      # Method that increases the user's account balance by amount
-        
-    #     return self
+    def make_deposit (self, account_idx, amount):                      # Method that increases the user's account balance by amount
+        self.account[account_idx].deposit(amount)
+        return self
     
     # def make_withdrawal (self, amount):                     # Method that decreases the user's account_balance by specified amount
     #     self.account_balance -= amount
@@ -91,12 +91,13 @@ class User:
 
 # //// MAIN EXECUTABLE SECTION /////////////////////////////
 
-user_1 = User("Vin", "Diesel")
+user_1 = User("Vin", "Diesel")                                      # 3 users created
 user_2 = User("Brad","Pitt")
 user_3 = User("Dwayne","Johnson")
-user_1.info()
-user_2.info()
-user_3.info()
+
+user_1.make_deposit(0,10000).info()                                 # the 3 users make their initial deposits
+user_2.make_deposit(0,25000).info()
+user_3.make_deposit(0,50000).info()
 
 
 
