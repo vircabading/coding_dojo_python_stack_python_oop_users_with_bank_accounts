@@ -64,10 +64,15 @@ class User:
         self.account[account_idx].withdraw(amount)
         return self
     
-    # def display_user_balance(self):                         # Method display user balance
-    #     print(f"{' Balance Information ':*^80}")
-    #     print(f" User: {self.first_name} {self.last_name} ::: Balance: {self.account_balance}\n")
-    #     return self
+    def display_user_balance(self):                         # Method display user balance
+        print(f"{f' User Balance ::: First Name : {self.first_name} :: Last Name : {self.last_name} ':*^100}")
+        for account in self.account:
+            account.display_account_info()
+        return self
+
+    def add_bank_account (self, int_rate, amount):
+        self.account.append(BankAccount(int_rate, amount))
+        return self
     
     # def transfer_money (self, other_user, amount):     # Method to transfer an amount from user to another user
     #     self.make_withdrawal(amount)
@@ -95,14 +100,17 @@ user_1 = User("Vin", "Diesel")                                      # 3 users cr
 user_2 = User("Brad","Pitt")
 user_3 = User("Dwayne","Johnson")
 
-user_1.make_deposit(0,10000).info()                                 # the 3 users make their initial deposits
-user_2.make_deposit(0,25000).info()
-user_3.make_deposit(0,50000).info()
+user_1.make_deposit(0,10000).display_user_balance()                                 # the 3 users make their initial deposits
+user_2.make_deposit(0,25000).display_user_balance()
+user_3.make_deposit(0,50000).display_user_balance()
 
 print()
 utl.print_desc("Vin got hungry, so he bought a $7 in and out burger")
-user_1.make_withdrawal(0,7).info()
+user_1.make_withdrawal(0,7).display_user_balance()
+print()
 
+utl.print_desc("The Rock makes bank in his new movie Fast and Furiouser, so he opens another bank account")
+user_3.add_bank_account(5,1234567).display_user_balance()
 
 
 # account_1 = BankAccount(6,1000)                                 # Create 2 accounts
