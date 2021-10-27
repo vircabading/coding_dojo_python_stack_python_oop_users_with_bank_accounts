@@ -1,5 +1,5 @@
 # //////////////////////////////////////////////////////////
-# Subj: Coding Dojo > Python Stack > Python > OOP: Bank Account 
+# Subj: Coding Dojo > Python Stack > Python > OOP: Users with Bank Accounts 
 # By: Virgilio D. Cabading Jr
 # //////////////////////////////////////////////////////////
 
